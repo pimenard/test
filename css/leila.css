@@ -1,0 +1,499 @@
+/* POLICES DE CARACTÈRES LOCALES */
+@font-face {
+  font-family: Ribbon;
+  src: url(Ribbon_V2_2011.otf);
+}
+
+@font-face {
+  font-family: 'Icones';
+  src: url(../fonts/icones.woff);
+}
+
+/*
+  STRUCTURE ET STYLES COMMUNS
+*/
+/* Pour la propriété box-sizing, voir : http://www.paulirish.com/2012/box-sizing-border-box-ftw */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #7f7f7f;
+  font-size: 18px;
+}
+
+a, a:visited, a:active, a:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+#conteneur {
+  background-color: #fff;
+  box-shadow: 0px 0px 30px 2px rgba(0,0,0,0.5);
+  width: 1268px;
+  margin: 30px auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*
+  ENTETE ET MENU DE NAVIGATION
+*/
+
+#conteneur > header {
+  width: 100%;
+  color: white;
+  background-repeat: no-repeat;
+}
+
+.page-accueil > header {
+  background-image: url(../images/accueil-entete.jpg);
+  height: 640px;
+}
+
+.page-menu > header {
+  background-image: url(../images/menu-entete.jpg);
+}
+
+.page-vins > header {
+  background-image: url(../images/vins-entete.jpg);
+}
+
+.barre-haut {
+  height: 50px;
+  background-color: black;
+  opacity: 0.75;
+  text-align: center;
+  padding: 0 170px;
+}
+
+h1.logo {
+  display: inline-block;
+  margin: 0;
+  font-family: Ribbon, serif;
+  font-size: 1.67em;
+}
+
+h1.logo:hover {
+  color: #fce57e;
+}
+
+/* Barre de haut - liens de navigation */
+.barre-haut nav a {
+  margin: 5px;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  color: #000;
+  font-size: 0.89rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 32px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.barre-haut nav a:hover {
+  background-color: #fed531;
+}
+
+/* Navigation réseaux-sociaux */
+nav.social {
+  width: auto;
+  padding: 4px;
+  float: left;
+}
+
+/* Réseaux sociaux - icones */
+.icone-twitter::after {
+  font-family: Icones;
+  content: "\e900";
+}
+
+.icone-facebook::after {
+  font-family: Icones;
+  content: "\e901";
+}
+
+/* Navigation i18n */
+nav.i18n {
+  width: auto;
+  padding: 4px;
+  float: right;
+}
+
+nav.i18n a.actif {
+  background-color: rgba(154,154,154,0.8);
+}
+
+.titre-page {
+  clear: both;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+.page-accueil .titre-page {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.titre-page h1 {
+  font-family: Ribbon, serif;
+  font-weight: 400;
+  font-size: 7.67rem;
+  letter-spacing: 0.75rem;
+  line-height: 1em;
+  margin: 0px;
+  margin-left: 0px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.page-accueil .titre-page h1 {
+  font-size: 5.34rem;
+  letter-spacing: 0.75rem;
+  margin-bottom: 10px;
+}
+
+.titre-page h3 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.86rem;
+  font-weight: 600;
+  letter-spacing: 0.36em;
+  margin: 0px;
+  padding: 0;
+}
+
+.info-utile {
+  text-align: center;
+  padding: 0;
+}
+
+.info-utile p {
+  margin: 5px;
+  font-size: 1.11em;
+}
+
+.info-utile .aujourdui {
+  color: #fed531;
+  font-size: 1.7em;
+  font-weight: 500;
+}
+
+.info-utile .telephone {
+  font-weight: bold;
+}
+
+/* Navigation principale */
+nav.nav-principale {
+  margin: 40px auto 20px auto;
+  text-align: center;
+}
+
+
+nav.nav-principale a {
+  display: inline-block;
+  padding: 0px;
+  margin: 0 25px;
+  width: 128px;
+  height: 128px;
+}
+
+/* Feuille de sprite */
+.sprite {
+  background-image: url(../images/nav-feuille-de-sprite.png);
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.sprite-icone-menu-blanc {
+  background-position: -5px -5px;
+}
+
+.sprite-icone-menu-gris {
+  background-position: -143px -5px;
+}
+
+.sprite-icone-menu-blanc:hover,
+.sprite-icone-menu-gris:hover,
+.sprite-icone-menu-gris.actif {
+  background-position: -281px -5px;
+}
+
+.sprite-icone-vins-blanc {
+  background-position: -5px -281px;
+}
+
+.sprite-icone-vins-gris {
+  background-position: -143px -281px;
+}
+
+.sprite-icone-vins-blanc:hover,
+.sprite-icone-vins-gris:hover,
+.sprite-icone-vins-gris.actif {
+  background-position: -281px -281px;
+}
+
+.sprite-icone-reservation-blanc {
+  background-position: -5px -143px;
+}
+
+.sprite-icone-reservation-gris {
+  background-position: -143px -143px;
+}
+
+.sprite-icone-reservation-blanc:hover,
+.sprite-icone-reservation-gris:hover,
+.sprite-icone-reservation-gris.actif {
+  background-position: -281px -143px;
+}
+
+/*
+  CONTENU PRINCIPAL
+*/
+
+.contenu-principal {
+  background-color: white;
+  color: #444444;
+  margin: 0;
+  padding: 30px 170px;
+}
+
+.contenu-principal h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.11rem;
+  font-weight: 400;
+  margin: 0px;
+  margin-top: 20px;
+}
+
+.contenu-principal p {
+  font-size: 1rem;
+}
+
+.contenu-principal video {
+  float: left;
+  width: 420px;
+  margin: 20px 15px 10px 0;
+}
+
+/*
+  MENU/LISTE DES VINS
+*/
+
+.citation {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc; 
+  clear: both;
+  overflow: hidden;
+  padding: 15px;
+  margin-bottom: 40px;
+  margin-top: -10px;
+}
+
+.citation img {
+  float: left;
+}
+
+.citation blockquote {
+  font-size: 1.5em;
+  font-style: italic;
+  color: #777;
+  margin-left: 200px;
+  padding-left: 20px;
+  border-left: 1px solid #ccc;
+}
+
+blockquote cite {
+  color: #aaa;
+  font-size: 0.8em;
+  font-style: normal;
+  display: block;
+  margin-top: 10px;
+}
+
+.frm-recherche {
+  text-align: center;
+  padding: 25px;
+}
+
+.frm-recherche label {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.frm-recherche input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-size: 0.85em;
+  font-weight: normal;
+  margin-left: 20px;
+}
+
+.carte section ul {
+  padding: 0px;
+  overflow-x: hidden;
+  list-style: none;
+}
+
+.carte section ul li {
+  padding-bottom: 15px;
+}
+
+.carte section ul li::after {
+  float: left;
+  width: 0;
+  white-space: nowrap;
+ content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+}
+.carte section ul span:first-child {
+  padding-right: 0.33em;
+  background: white;
+}
+.carte section ul span + span {
+  float: right;
+  padding-left: 0.33em;
+  background: white;
+  position: relative;
+  z-index: 1;
+}
+
+.carte section ul li span i {
+  font-size: 0.95em;
+  font-weight: normal;
+  color: #999;
+}
+
+.carte section ul li span.prix {
+  font-weight: bold;
+}
+
+.carte section ul li .vin-provenance {
+  color:#666;
+  font-size: 0.95em;
+  font-weight: normal;
+  padding-left: 20px;
+  padding-right: 5px;
+}
+
+.carte section ul li .article-menu-portion {
+  color:#666;
+  font-size: 0.95em;
+  font-weight: normal;
+  padding-right: 5px;
+}
+
+/*
+  PIED DE PAGE
+*/
+
+#conteneur > footer {
+  background-color: #5f5f5f;
+  color: #ffffff;
+  margin: 0;
+  padding: 40px 170px 60px 170px;
+}
+
+/* Adresse et carte Google : sur toutes les pages */
+
+#conteneur > footer div.adresse {
+  font-size: 1.45rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+#conteneur > footer div.adresse p {
+  margin: 10px 0;
+}
+
+/* Formulaire et heures d'ouvertures : uniquement sur la page d'accueil */
+footer h2 {
+	font-family: Roboto Slab;
+	font-size: 2.111em;
+	font-weight: 400;
+	color: #bdbdbd;
+}
+
+footer .formulaire-contact {
+	width: 45%;
+	float: left;
+	margin-bottom: 60px;
+}
+
+footer .formulaire-contact form {
+  width: 100%;
+  color: #333;
+}
+
+footer .formulaire-contact label {
+  display: block;
+  color: #ffffff;
+}
+
+footer .formulaire-contact input,
+footer .formulaire-contact textarea {
+	display: block;
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding: 7px;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+
+footer .formulaire-contact textarea {
+	height: 140px;
+	resize: vertical;
+}
+
+footer .formulaire-contact button {
+	background-color: #ddb207;
+  color: #594909;
+  font-family: Roboto Slab;
+  font-size: 1.111em;
+  font-weight: 700;
+	border: 1px solid #ddb207;
+	border-radius: 5px;
+	padding: 5px 40px;
+	margin-top: 10px;
+}
+
+footer .heures-ouverture {
+	width: 45%;
+	float: right;
+}
+
+footer .heures-ouverture table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+footer .heures-ouverture table caption {
+	font-family: Roboto Slab;
+	font-size: 1.56em;
+	font-weight: 500;
+	text-align: left;
+	margin: 15px 0 10px 0;
+}
+
+footer .heures-ouverture table tr {
+	border-top: 1px solid #7c7c7c;
+}
+
+footer .heures-ouverture table tbody tr:first-child {
+	border-top: 3px solid #7c7c7c;
+}
+
+footer .heures-ouverture table tbody tr td {
+	padding: 7px 0;
+}
+
+footer .heures-ouverture table tbody tr td:last-child {
+	text-align: right;
+}
